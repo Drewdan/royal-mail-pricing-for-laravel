@@ -7,7 +7,8 @@ on:
     branches: [ develop, feature ]
 
 jobs:
-  build:
+  PHP_82_Tests:
+    name: PHP 8.2 Tests
     runs-on: ubuntu-latest
     container:
       image: kirschbaumdevelopment/laravel-test-runner:8.2

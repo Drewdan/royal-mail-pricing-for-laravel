@@ -40,7 +40,7 @@
             "@php vendor/bin/testbench package:discover --ansi"
         ],
         "test": [
-            "@php vendor/bin/phpunit --ansi"
+            "phpunit"
         ]
     }
 
