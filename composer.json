@@ -1,0 +1,47 @@
+{
+    "name": "drewdan/royal-mail-pricing",
+    "description": "A package to calculate the shipping costs for Royal Mail",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Drewdan\\RoyalMailPricing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drewdan\\RoyalMailPricing\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Drewdan\\RoyalMailPricing\\RoyalMailPricingServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrew Arscott"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^9.0.",
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5",
+        "spatie/ray": "^1.36",
+        "spatie/laravel-ray": "^1.31"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "test": [
+            "@php vendor/bin/phpunit --ansi"
+        ]
+    }
+
+}
